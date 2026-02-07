@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import nightSound from '../assets/night_sound.mp3';
+import { Button } from "antd";
 
 const Night = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -22,7 +23,7 @@ const Night = () => {
 
     return (
         <>
-            <button onClick={toggleMusic} >{isPlaying ? "Stop" : "Play"}</button>
+            <Button onClick={toggleMusic} >{isPlaying ? "Stop" : "Play"}</Button>
         </>
     )
 }

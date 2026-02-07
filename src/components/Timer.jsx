@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import Alarm from '../assets/Alarm.mp3';
+import {Button} from 'antd';
 
 const Timer = ({time, startTime}) => {
     const [timeLeft, setTimeLeft] = useState(time);
@@ -38,7 +39,7 @@ const Timer = ({time, startTime}) => {
     return (
         <>
         <h1>{timeLeft}</h1>
-        {isAlarmPlaying && <button onClick={stopAlarmSound}>STOP ALARM SOUND</button>}
+        {isAlarmPlaying && <Button onClick={stopAlarmSound}>STOP ALARM SOUND</Button>}
         </>
     )
 
